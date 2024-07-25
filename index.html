@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoramento de Acidentes Hospitalares</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Monitoramento de Acidentes Hospitalares</h1>
+        <form id="incidentForm">
+            <label for="incidentType">Tipo de Incidente:</label>
+            <select id="incidentType" name="incidentType" required>
+                <option value="queda">Queda</option>
+                <option value="erroDeMedicação">Erro de Medicação</option>
+                <option value="infecçãoHospitalar">Infecção Hospitalar</option>
+            </select>
+
+            <label for="patientName">Nome do Paciente:</label>
+            <input type="text" id="patientName" name="patientName" required>
+
+            <label for="worker">Trabalhador Alertado:</label>
+            <select id="worker" name="worker" required>
+                <option value="Enfermeiro João">Enfermeiro João</option>
+                <option value="Enfermeira Maria">Enfermeira Maria</option>
+                <option value="Dr. Silva">Dr. Silva</option>
+                <option value="Dra. Souza">Dra. Souza</option>
+            </select>
+
+            <label for="description">Descrição:</label>
+            <textarea id="description" name="description" rows="4" required></textarea>
+
+            <button type="submit">Registrar Incidente</button>
+        </form>
+        <h2>Incidentes Registrados</h2>
+        <div id="incidentList"></div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
